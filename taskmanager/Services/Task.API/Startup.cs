@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Task.Application;
+using Task.Infrastructure;
 
 namespace Task.API
 {
@@ -28,6 +29,7 @@ namespace Task.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
 
 
             services.AddControllers();
