@@ -25,3 +25,17 @@ please change if required.
 
 4. run the app and start testing at https://localhost:3867/swagger/index.html
 
+5. Task requirement 1:
+
+taskmanager/taskmanager/Services/Task.Application/Features/Tasks/Commands/AddTask/AddTaskValidator.cs /
+
+RuleFor(x => x.DueDate).NotEmpty().NotNull().GreaterThanOrEqualTo(DateTime.Today).WithMessage("{DueDate} is required");
+
+6. Task requirement 2:
+
+taskmanager/taskmanager/Services/Task.Infrastructure/Repositories/TaskRepository.cs 
+
+public async Task<Dictionary<string, int>> GetTasksCountForPriorityAndStatusOnADate()
+
+
+
