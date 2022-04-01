@@ -24,10 +24,10 @@ namespace Task.Application.Behaviours
 
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
-            var failedValidations = await _taskRepository.GetAsync(x => x.Priority.ToLower() == "High".ToLower() && x.Status.ToLower() != "Finished".ToLower() && x.DueDate == DateTime.Today);
-            if (failedValidations.Count > 100)
+            var taskcount= await _taskRepository.GetTasksCountForPriorityAndStatusOnADate();
+            if (taskcount.First().Value >= 100)
             {
-                throw new ValidationException("UnFinished High Priority Tasks have exceeded 100 today: " + request.ToString());
+                throw new ValidationException($"UnFinished High Priority Tasks have exceeded 100 for date{taskcount.First().Key.ToString()}: " + request.ToString());
             }
 
             if (_validators.Any())

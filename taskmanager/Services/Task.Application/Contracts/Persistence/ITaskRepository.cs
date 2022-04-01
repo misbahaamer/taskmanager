@@ -13,6 +13,6 @@ namespace Task.Application.Contracts.Persistence
         Task<IEnumerable<MyTask>> GetTasksByPriorityType(string priority);
         Task<IEnumerable<MyTask>> GetTasksByStatus(string status);
         Task<IEnumerable<MyTask>> GetTasksByDueDate(DateTime date);
-        Task<int> GetTasksCountForPriorityAndStatusOnADate();
+        Task<Dictionary<string,int>> GetTasksCountForPriorityAndStatusOnADate();
     }
 }
