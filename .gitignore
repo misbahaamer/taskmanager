@@ -9,3 +9,6 @@
 /taskmanager/Services/Task.Application/obj
 /taskmanager/Services/Task.Domain/obj
 /taskmanager/Services/Task.Infrastructure/obj
+/taskmanager/Services/Task.Application/bin/Debug/net5.0
+/taskmanager/Services/Task.Domain/bin/Debug/net5.0
+/taskmanager/Services/Task.Infrastructure/bin/Debug/net5.0
