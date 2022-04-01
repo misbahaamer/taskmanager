@@ -9,11 +9,11 @@ namespace Task.Application.Features.Tasks.Queries.GetTasksList
 {
     public class GetTasksListQuery : IRequest<List<MyTaskVm>>
     {
-        public string Name { get; set; }
+        
 
-        public GetTasksListQuery(string name)
+        public GetTasksListQuery()
         {
-            Name = name;
+            
         }
     }
 }
