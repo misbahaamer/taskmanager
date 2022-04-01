@@ -37,5 +37,7 @@ taskmanager/taskmanager/Services/Task.Infrastructure/Repositories/TaskRepository
 
 public async Task<Dictionary<string, int>> GetTasksCountForPriorityAndStatusOnADate()
 
+7. Unit tests are in the UniTest1.cs and tests can be run from Test Explorer
+
 
 
