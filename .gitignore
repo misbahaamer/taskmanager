@@ -14,3 +14,6 @@
 /taskmanager/Services/Task.Infrastructure/bin/Debug/net5.0
 /taskmanager/obj
 /taskmanager/Services/TestApi/obj
+/taskmanager/Services/TestApi/bin/Debug/net5.0
+/taskmanager/Services/Tests/bin/Debug/net5.0
+/taskmanager/Services/Tests/obj
