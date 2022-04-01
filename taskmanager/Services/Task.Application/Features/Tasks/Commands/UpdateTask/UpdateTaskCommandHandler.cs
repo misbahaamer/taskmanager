@@ -31,6 +31,7 @@ namespace Task.Application.Features.Tasks.Commands.UpdateTask
             if (taskToUpdate == null)
             {
                 _logger.LogError("Task doesnot exist in the database");
+                throw new ArgumentNullException(nameof(MyTask), request.Id.ToString());
             }
             _mapper.Map(request, taskToUpdate, typeof(UpdateTaskCommand), typeof(MyTask));
             await _taskRepository.UpdateAsync(taskToUpdate);
