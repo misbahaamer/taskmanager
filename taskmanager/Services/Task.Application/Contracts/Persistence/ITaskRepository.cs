@@ -9,7 +9,7 @@ namespace Task.Application.Contracts.Persistence
 {
     public interface ITaskRepository : IAsyncRepository<MyTask>
     {
-        Task<IEnumerable<MyTask>> GetTasksByName(string userName);
+        Task<IEnumerable<MyTask>> GetTasksByName(string name);
         Task<IEnumerable<MyTask>> GetTasksByPriorityType(string priority);
         Task<IEnumerable<MyTask>> GetTasksByStatus(string status);
         Task<IEnumerable<MyTask>> GetTasksByDueDate(DateTime date);

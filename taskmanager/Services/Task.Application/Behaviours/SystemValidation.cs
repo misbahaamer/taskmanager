@@ -25,7 +25,7 @@ namespace Task.Application.Behaviours
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             var taskcount= await _taskRepository.GetTasksCountForPriorityAndStatusOnADate();
-            if (taskcount.First().Value >= 100)
+            if (taskcount != null && taskcount.First().Value >= 100)
             {
                 throw new ValidationException($"UnFinished High Priority Tasks have exceeded 100 for date{taskcount.First().Key.ToString()}: " + request.ToString());
             }
