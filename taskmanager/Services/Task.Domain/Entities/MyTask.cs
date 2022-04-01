@@ -7,7 +7,7 @@ using Task.Domain.Common;
 
 namespace Task.Domain.Entities
 {
-    public class Task : EntityBase
+    public class MyTask : EntityBase
     {
         public string Name { get; set; }
         public string Description { get; set; }
