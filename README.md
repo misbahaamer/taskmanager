@@ -7,7 +7,7 @@ change connection string in taskmanager/taskmanager/Services/Task.API/appsetting
     "TaskConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=TaskDb;Integrated Security=True"
   },
 
-2. run the sql script in taskmanager/taskmanager/ CreateDbTable.sql to create tables
+2. run the sql script in taskmanager/taskmanager/ CreateDbTable.sql to create tables(program.cs is set to creating db and table automatically and also seeding 1 record in the table. tun this script if the context seeder doesnot run in your environment )
 3. visual studio start/debug profile must be changed from IISExpress to Task.API. i have changed it in taskmanager/taskmanager/Services/Task.API/Properties/launchSettings.json and updated the port to 3867 
 
 "Task.API": {

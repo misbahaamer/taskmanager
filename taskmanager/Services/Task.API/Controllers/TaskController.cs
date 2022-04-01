@@ -28,8 +28,8 @@ namespace Task.API.Controllers
         public async Task<ActionResult<IEnumerable<MyTaskVm>>> GetTasks()
         {
             var query = new GetTasksListQuery();
-            var orders = await _mediator.Send(query);
-            return Ok(orders);
+            var tasks = await _mediator.Send(query);
+            return Ok(tasks);
         }
 
 
