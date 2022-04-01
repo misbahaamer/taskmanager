@@ -16,7 +16,7 @@ namespace Task.Infrastructure.Persistance
         {
         }
 
-        public DbSet<MyTask> Orders { get; set; }
+        public DbSet<MyTask> Tasks { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
