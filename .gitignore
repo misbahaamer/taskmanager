@@ -5,3 +5,7 @@
 /.vs
 /taskmanager/.vs/taskmanager/v16
 /taskmanager/Services/Task.API/obj
+/taskmanager/Services/Task.API/bin/Debug/net5.0
+/taskmanager/Services/Task.Application/obj
+/taskmanager/Services/Task.Domain/obj
+/taskmanager/Services/Task.Infrastructure/obj
